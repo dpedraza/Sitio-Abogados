@@ -1,0 +1,6 @@
+{
+  "name": "Mendoza Abogados",
+  "description": "Sitio oficial y tarjeta digital de Daniel Mendoza Abogados. Ofrece soluciones legales con excelencia y compromiso.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
