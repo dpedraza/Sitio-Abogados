@@ -7,6 +7,12 @@ y el proyecto adopta [Versionado Semántico](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+### Eliminado
+
+- Botón/enlace a la vista "Propuesta & Mockups" en toda la navegación pública
+  (Header y Footer). La vista sigue existiendo pero ya no es accesible desde la UI;
+  se oculta en el Header mediante `hidePropuestaTab`.
+
 ### Cambiado
 
 - Build: se dividen las librerías pesadas (`react`, `motion`, `html2canvas`) en

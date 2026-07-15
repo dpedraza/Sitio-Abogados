@@ -79,10 +79,11 @@ export default function App() {
     <div className="relative min-h-screen flex flex-col justify-between font-sans selection:bg-prestige-gold/25 selection:text-prestige-navy overflow-x-hidden">
       
       {/* 1. Nav Header */}
-      <Header 
-        activeSection={activeSection} 
-        setActiveSection={setActiveSection} 
+      <Header
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
         onOpenCard={() => setIsCardOpen(true)}
+        hidePropuestaTab
       />
 
       {/* 2. Page Content frame with fluid transitions */}

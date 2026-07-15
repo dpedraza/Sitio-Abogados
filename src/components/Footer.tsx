@@ -64,8 +64,7 @@ export default function Footer({ setActiveSection, onOpenCard }: FooterProps) {
                 { id: 'areas', label: 'Áreas de Práctica' },
                 { id: 'abogados', label: 'Nuestro Equipo' },
                 { id: 'blog', label: 'Publicaciones y Blog' },
-                { id: 'contacto', label: 'Contacto y Citas' },
-                { id: 'propuesta', label: '✨ Material Comercial & Mockups' }
+                { id: 'contacto', label: 'Contacto y Citas' }
               ].map((link) => (
                 <li key={link.id}>
                   <button
