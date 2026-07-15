@@ -12,6 +12,19 @@ export default defineConfig(({ command }) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      rollupOptions: {
+        output: {
+          // Separar las librerías pesadas del bundle principal para evitar
+          // un único chunk grande y mejorar el cacheo del navegador.
+          manualChunks: {
+            react: ['react', 'react-dom'],
+            motion: ['motion'],
+            html2canvas: ['html2canvas'],
+          },
+        },
+      },
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

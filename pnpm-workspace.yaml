@@ -2,7 +2,7 @@
 # Autorizamos solo los necesarios:
 #   - esbuild: instala su binario nativo (lo usa Vite en el build).
 #   - protobufjs: subdependencia transitiva de @google/genai.
-# @google/genai queda en false: es una dependencia declarada pero no usada en src/.-
+# @google/genai queda en false: es una dependencia declarada pero no usada en src/.
 allowBuilds:
   esbuild: true
   protobufjs: true

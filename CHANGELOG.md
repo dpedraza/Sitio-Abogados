@@ -7,11 +7,18 @@ y el proyecto adopta [Versionado Semántico](https://semver.org/lang/es/).
 
 ## [Sin publicar]
 
+### Cambiado
+
+- Build: se dividen las librerías pesadas (`react`, `motion`, `html2canvas`) en
+  chunks propios mediante `build.rollupOptions.output.manualChunks` en
+  `vite.config.ts`. Elimina el aviso de Vite por chunk > 500 kB y mejora el cacheo.
+
 ### Corregido
 
 - CI de GitHub Pages: se elevó Node de 20 a 22 en `deploy.yml`. pnpm 11 requiere
   Node.js ≥ 22.13 (usa el módulo `node:sqlite`), por lo que el despliegue fallaba
   con `ERR_UNKNOWN_BUILTIN_MODULE`. Alineado también `engines.node` a `>=22.13`.
+- Typo en un comentario de `pnpm-workspace.yaml`.
 
 ## [0.1.0] - 2026-07-15
 
