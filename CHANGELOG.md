@@ -5,6 +5,14 @@ Todos los cambios notables de este proyecto se documentan en este archivo.
 El formato sigue las pautas de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el proyecto adopta [Versionado Semántico](https://semver.org/lang/es/).
 
+## [Sin publicar]
+
+### Corregido
+
+- CI de GitHub Pages: se elevó Node de 20 a 22 en `deploy.yml`. pnpm 11 requiere
+  Node.js ≥ 22.13 (usa el módulo `node:sqlite`), por lo que el despliegue fallaba
+  con `ERR_UNKNOWN_BUILTIN_MODULE`. Alineado también `engines.node` a `>=22.13`.
+
 ## [0.1.0] - 2026-07-15
 
 ### Añadido

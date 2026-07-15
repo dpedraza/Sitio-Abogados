@@ -24,7 +24,7 @@ Sitio web institucional de página única para el estudio jurídico **Daniel Men
 
 ## Requisitos previos
 
-- Node.js 20 o superior
+- Node.js 22.13 o superior (requerido por pnpm 11)
 - [pnpm](https://pnpm.io/) 11 (gestor de paquetes del proyecto). Con Corepack:
   `corepack enable && corepack prepare pnpm@11.5.0 --activate`
 
