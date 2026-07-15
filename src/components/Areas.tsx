@@ -80,11 +80,11 @@ export default function Areas({ selectedAreaId, setSelectedAreaId, setActiveSect
           <div className="grid lg:grid-cols-12 gap-8 items-start">
             
             {/* Sidebar practice area selector */}
-            <div className="lg:col-span-4 bg-white rounded-2xl border border-prestige-border/60 p-4 shadow-sm">
+            <div className="lg:col-span-4 bg-white rounded-2xl border border-prestige-border/60 p-3 sm:p-4 shadow-sm">
               <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-prestige-muted px-4 mb-4">
                 Seleccione un Área
               </h2>
-              <div className="flex flex-col gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
                 {PRACTICE_AREAS.map((area) => {
                   const isActive = area.id === selectedAreaId;
                   return (
@@ -92,13 +92,13 @@ export default function Areas({ selectedAreaId, setSelectedAreaId, setActiveSect
                       key={area.id}
                       id={`sidebar-select-${area.id}`}
                       onClick={() => setSelectedAreaId(area.id)}
-                      className={`flex items-center gap-4 p-4 rounded-xl text-left transition-all cursor-pointer font-sans ${
+                      className={`w-full flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl text-left transition-all cursor-pointer font-sans ${
                         isActive 
                           ? 'bg-prestige-navy text-white shadow-sm' 
                           : 'bg-transparent text-prestige-navy hover:bg-prestige-bg'
                       }`}
                     >
-                      <div className={`p-2 rounded-lg transition-colors ${
+                      <div className={`p-2 rounded-lg transition-colors shrink-0 ${
                         isActive ? 'bg-prestige-gold/20' : 'bg-prestige-gold-pale/50'
                       }`}>
                         {getIcon(area.icon, isActive)}
@@ -141,7 +141,7 @@ export default function Areas({ selectedAreaId, setSelectedAreaId, setActiveSect
                   className="flex flex-col"
                 >
                   {/* Aspect banner image with category badge */}
-                  <div className="aspect-[21/9] w-full bg-prestige-navy/80 overflow-hidden relative">
+                  <div className="aspect-[16/9] sm:aspect-[21/9] w-full bg-prestige-navy/80 overflow-hidden relative">
                     <img 
                       src={getAreaImage(currentArea.id)} 
                       alt={currentArea.title} 
@@ -149,30 +149,30 @@ export default function Areas({ selectedAreaId, setSelectedAreaId, setActiveSect
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-6 left-6 right-6 text-white text-left">
+                    <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-white text-left">
                       <span className="px-2.5 py-1 bg-prestige-gold text-prestige-navy text-[10px] font-bold uppercase tracking-widest rounded mb-2 inline-block">
                         Especialización
                       </span>
-                      <h2 className="font-serif text-xl sm:text-2xl font-bold tracking-tight">
+                      <h2 className="font-serif text-lg sm:text-2xl font-bold tracking-tight">
                         Servicios en {currentArea.title}
                       </h2>
                     </div>
                   </div>
 
                   {/* Body Content */}
-                  <div className="p-8 text-left">
-                    <p className="text-sm text-prestige-dark font-light leading-relaxed mb-6">
+                  <div className="p-5 sm:p-8 text-left">
+                    <p className="text-xs sm:text-sm text-prestige-dark font-light leading-relaxed mb-6">
                       {currentArea.detailedDescription}
                     </p>
 
-                    <h3 className="font-serif text-base font-bold text-prestige-navy mb-4 flex items-center gap-2">
+                    <h3 className="font-serif text-sm sm:text-base font-bold text-prestige-navy mb-4 flex items-center gap-2">
                       <Award size={18} className="text-prestige-gold" />
                       Áreas Específicas de Asistencia:
                     </h3>
 
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                       {currentArea.keyPoints?.map((point, i) => (
-                        <div key={i} className="flex items-start gap-3 bg-prestige-bg/50 p-3.5 rounded-xl border border-prestige-border/20">
+                        <div key={i} className="flex items-start gap-3 bg-prestige-bg/50 p-3 sm:p-3.5 rounded-xl border border-prestige-border/20">
                           <CheckCircle size={16} className="text-prestige-gold shrink-0 mt-0.5" />
                           <p className="text-xs text-prestige-dark font-medium leading-relaxed">
                             {point}
@@ -182,7 +182,7 @@ export default function Areas({ selectedAreaId, setSelectedAreaId, setActiveSect
                     </div>
 
                     {/* Bottom CTA container */}
-                    <div className="mt-10 p-6 bg-prestige-gold-pale/35 rounded-2xl border border-prestige-gold/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="mt-8 sm:mt-10 p-5 sm:p-6 bg-prestige-gold-pale/35 rounded-2xl border border-prestige-gold/15 flex flex-col sm:flex-row items-center justify-between gap-4">
                       <div className="text-center sm:text-left">
                         <h4 className="font-serif text-sm font-bold text-prestige-navy">
                           ¿Requiere asistencia especializada en {currentArea.title}?
@@ -194,7 +194,7 @@ export default function Areas({ selectedAreaId, setSelectedAreaId, setActiveSect
                       <button
                         id={`area-cta-btn-${currentArea.id}`}
                         onClick={handleCtaClick}
-                        className="px-6 py-3 bg-prestige-navy hover:bg-prestige-navy/90 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center gap-2 shrink-0 cursor-pointer"
+                        className="w-full sm:w-auto px-6 py-3 bg-prestige-navy hover:bg-prestige-navy/90 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 shrink-0 cursor-pointer"
                       >
                         Agendar Consulta
                         <ArrowRight size={14} />

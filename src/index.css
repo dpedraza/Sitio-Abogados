@@ -20,4 +20,5 @@ body {
   background-color: var(--color-prestige-bg);
   color: var(--color-prestige-dark);
   font-family: var(--font-sans);
+  overflow-x: hidden;
 }
