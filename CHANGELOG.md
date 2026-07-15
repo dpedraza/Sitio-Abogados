@@ -5,7 +5,7 @@ Todos los cambios notables de este proyecto se documentan en este archivo.
 El formato sigue las pautas de [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el proyecto adopta [Versionado Semántico](https://semver.org/lang/es/).
 
-## [Sin publicar]
+## [0.1.1] - 2026-07-15
 
 ### Eliminado
 
@@ -56,4 +56,5 @@ y el proyecto adopta [Versionado Semántico](https://semver.org/lang/es/).
 - Instrucciones de `GEMINI_API_KEY` del `README.md`: no hay integración de IA activa
   en el código actual.
 
+[0.1.1]: https://github.com/dpedraza/Sitio-Abogados/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/dpedraza/Sitio-Abogados/releases/tag/v0.1.0
